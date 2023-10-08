@@ -1,0 +1,167 @@
+body{
+    font-size: 32px;
+    background: url("image/backgroundPic.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* body{
+    background: url("images/landscape.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px;
+} */
+.container{
+    height: 100vh;
+    background-color: rgba(0,0,0,0.7);
+    padding: 20px;
+    overflow-y: auto;
+}
+@font-face {
+    font-family: myFont;
+    src: url("font/Saturday.otf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.logo img{
+    height: 75px;
+    width: 75px;
+}
+.logo h2{
+    font-family: myFont;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    color: white;
+
+}
+nav{
+    display: flex;
+    align-items: center;
+}
+.navBar{
+    width: 70%;
+    min-width: 300px;
+    margin-left: 150px;
+}
+.navBar ul{
+    display: flex;
+    justify-content: space-between;
+}
+.navBar ul li{
+    list-style: none;
+    line-height: 20px;
+    position: relative;
+}
+.navBar ul li a{
+    text-decoration: none;
+    color: white;
+}
+.navBar ul li a::after{
+    content: " ";
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: purple;
+    bottom: -13px;
+    scale: 0 1;
+    transition: 0.5s;
+}
+
+
+.navBar ul li a:hover::after{
+    scale: 1 1;
+}
+
+
+.content{
+    height: 90vh;
+    display: grid;
+    place-items: center;
+    color: white;
+}
+.text{
+    font-size: 1.5rem;
+    width: 1000px;
+    text-wrap: balance;
+}
+.text1{
+    display: grid;
+    width: 750px;
+    font-size: 2rem;
+    place-items: center;
+}
+
+@media only screen and (max-width: 2000px){
+    body{
+        font-size: 25px;
+    }
+}
+@media only screen and (max-width: 1499px){
+    body{
+        font-size: 23px;
+    }
+}
+@media only screen and (max-width: 1390px){
+    body{
+        font-size: 17px;
+    }
+
+    .text{
+        width: 750px;
+    }
+}
+@media only screen and (max-width: 850px){
+    body{
+        font-size: 17px;
+    }
+    .text1{
+        width: 450px;
+    }
+    .text{
+        width: 500px;
+    }
+}
+@media only screen and (max-width: 580px){
+    .navBar ul{
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        left: 45px;
+        top: 100px;
+        gap: 15px;
+    }
+    .text1{
+        width: 400px;
+    }
+    .text{
+        width: 450px;
+    }
+}
+@media only screen and (max-width: 505px){
+    body{
+        font-size: 15px;
+    }
+    .text1{
+        width: 250px;
+    }
+    .text{
+        width: 300px;
+    }
+}
+@media only screen and (max-width: 349px){
+    body{
+        font-size: 13px;
+    }
+    .text1{
+        width: 200px;
+    }
+    .text{
+        width: 250px;
+    }
+}
+
